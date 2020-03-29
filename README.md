@@ -33,7 +33,7 @@ Give examples
 
 ### Executing
 * Execute a select on table GITConfig
-* Change only Value column values.
+* Change only Value column with new values.
 * If you want to configure more one user, INSERT using the same schema, so, get user machine name, and create 4 records with the same tag.
 * Now you are able to execute the command to commit in git.
 
