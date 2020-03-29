@@ -12,7 +12,8 @@ You will need:
 * SQL Server Management Studio
 * Visual Studio
 * NET Framework 4.6.1
-* A basic knowledge of SQL Server
+* GIT
+* A basic knowledge of SQL Server and GIT
 
 ```
 Give examples
@@ -20,63 +21,38 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+* Clone your source code into your server. Keep in mind this path, you will using on table GITConfig.
+* Clone this repository
+* After that, open CLR.sln in Visual Studio.
+* Build the project
+* Go to \bin\Realease and copy CLR.dll
+* Paste CLR.dll in the folder that you wish. Keep this path, you will need below.
+* Open install.sql (the file is in the CLR.sln) in your SSMS.
+* Change the lines 6, 24 and 60 to your configurations.
+* Run all the script.
 
-Say what the step will be
+### Executing
+* Execute a select on table GITConfig
+* Change only Value column values.
+* If you want to configure more one user, INSERT using the same schema, so, get user machine name, and create 4 records with the same tag.
+* Now you are able to execute the command to commit in git.
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+### Main command
 
 ```
-Give an example
+EXEC git '<branch>', '<objeto_to_commit>', '<message>'
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
 * NET Framework 4.6.1
 * SQL Server 2016
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+* GIT
 
 ## Authors
 
 * **Henrique Fávaro Tâmbalo** - *GitSqlServer* - [henriquecomp](https://github.com/henriquecomp)
-
 
 ## License
 
